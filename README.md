@@ -1,1 +1,1 @@
-https://github.com/SerbianGhost/ono-tebe-nado
+https://github.com/SerbianGhost/ono-tebe-nado-fd
