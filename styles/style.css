@@ -5,50 +5,68 @@
 .contacts__list {
   list-style-type: none;
   width: 243px;
+  font-style: normal;
+}
+.bottom-underline{
+  border-bottom: 1px solid currentColor;
 }
 .contacts__item {
   font-size: 18px;
   line-height: 24.3px;
+}
+.contacts__link {
+  text-decoration: none;
+}
+.background-blur::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 60%;
 }
 .header__nav {
   display: grid;
   grid-template-columns: 391.48px 1fr 240px;
   justify-content: space-between;
   align-items: center;
-  height: 293px;
+  min-height: 293px;
 }
 .header__menu {
-  list-style-type: circle;
+  list-style-type: none;
   list-style-position: inside;
   display: flex;
-  gap: 18px;
+  gap: 15px;
 }
 .header__item {
   width: max-content;
   font-size: 18px;
   line-height: 21.13px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
-.header__item a {
-  margin-left: -10px;
+.header__item::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border: 0.5px solid currentColor;
+  border-radius: 100%;
 }
-.header__item:nth-child(1) {
-  list-style: none;
-}
-.header__item:nth-child(1) a {
-  border-bottom: 0;
-  margin-left: 0;
+.header__start-item::before {
+  content: unset;
 }
 .header__link {
   text-decoration: none;
-  border-bottom: 1px solid black;
 }
 .header__logo {
-  width: 148px;
-  height: 105px;
+  width: 138px;
   margin-left: 40px;
 }
-.main {
-  height: 757px;
+.introduction {
+  min-height: 757px;
   background-image: url("../images/cover.jpg");
   background-position: center;
   background-size: cover;
@@ -59,62 +77,50 @@
   flex-direction: column;
   padding: 19px 0 50px 0;
 }
-.main * {
+.introduction * {
   position: relative;
   z-index: 2;
 }
-.main::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000000;
-  opacity: 60%;
-}
-.main__title {
+.introduction__title {
   font-size: 100px;
   font-weight: 700;
+  min-height: 385px;
   line-height: 115px;
   letter-spacing: 30px;
   text-transform: uppercase;
   display: flex;
+  gap: 20px;
+  padding-top: 40px;
   flex-direction: column;
   margin: auto auto;
 }
-.main__title span {
-  display: block;
-  position: relative;
+.introduction__title-last-letter {
+  letter-spacing: normal;
 }
-.main__title span:nth-child(2) {
+.introduction__title-center {
   text-align: center;
-  top: 20px;
-  left: 18px;
 }
-.main__title span:nth-child(3) {
-  text-align: right;
-  left: 30px;
-  top: 40px;
+.introduction__title-end {
+  text-align: end;
 }
-.main__description {
+.introduction__description {
   text-transform: uppercase;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.main__subtitle {
+.introduction__subtitle {
   font-weight: 400;
   line-height: 28px;
   word-spacing: 20px;
   font-size: 22px;
 }
-.maint__button {
+.introductiont__button {
   width: 256px;
   height: 51px;
   background-color: transparent;
   color: inherit;
-  border: 1px solid white;
+  border: 1px solid currentColor;
   cursor: pointer;
   font-size: 22px;
   font-weight: 500;
@@ -135,11 +141,13 @@
 .loots__card-list {
   margin-top: 27px;
   display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
   gap: 25px;
 }
 .loots__card {
   width: 334px;
-  height: 596px;
+  min-height: 596px;
   color: white;
   background-repeat: no-repeat;
   background-size: cover;
@@ -150,27 +158,17 @@
   justify-content: space-between;
   position: relative;
 }
-.loots__card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 60%;
-  background-color: #000000;
-}
 .loots__card * {
   position: relative;
   z-index: 2;
 }
-.loots__card:nth-child(1) {
+.hands-background {
   background-image: url("../images/card-lot-01.jpg");
 }
-.loots__card:nth-child(2) {
+.book-background {
   background-image: url("../images/card-lot-02.jpg");
 }
-.loots__card:nth-child(3) {
+.abstract-background {
   background-image: url("../images/card-lot-03.jpg");
 }
 .loots__card-title {
@@ -226,8 +224,10 @@
   margin-top: 100px;
   width: 688px;
 }
-.about__second-text {
+.margin-top-24-px {
   margin-top: 24px;
+}
+.width-693-px {
   width: 693px;
 }
 .footer {
@@ -249,15 +249,11 @@
 .footer__item {
   font-size: 18px;
 }
-.footer__item a {
+.footer__link {
   text-decoration-skip-ink: none;
 }
 .not-decorated {
-  text-decoration: none !important;
-}
-.footer__item a {
-  text-decoration-skip-ink: none;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .footer__social-medias ul {
