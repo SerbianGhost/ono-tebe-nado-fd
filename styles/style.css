@@ -254,7 +254,7 @@
   text-decoration: none;
 }
 
-.footer__social-medias ul {
+.footer__social-medias {
   gap: 48px;
 }
 .footer__social-media-item {
